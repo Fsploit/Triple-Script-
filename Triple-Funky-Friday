@@ -54,7 +54,7 @@ Credits:AddParagraph({
     do
     Fluent:Notify({
         Title = "Triple Hub | Funky Friday loaded",
-        Content = "report any bugs at https://dsc.gg/exploitx",
+        Content = "Weetard",
         SubContent = "or copy the link trough the 'Misc' page", -- Optional
         Duration = 3.5 -- Set to nil to make the notification not disappear
     })
