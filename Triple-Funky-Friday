@@ -1,0 +1,63 @@
+local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))();
+local Notify = AkaliNotif.Notify;
+
+wait(1);
+
+Notify({
+Description = "Funky Friday Has loaded.";
+Title = "Triple Hub";
+Duration = 5;
+});
+
+-- loader.lua 
+
+
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+
+local Window = Fluent:CreateWindow({
+    Title = "Triple Hub",
+    SubTitle = "Funky Friday",
+    TabWidth = 170,
+    Size = UDim2.fromOffset(450, 240),
+    Acrylic = false,
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.RightControl
+})
+
+local Tabs = {
+    Main = Window:AddTab({ Title = "Main", Icon = "Shield" }),
+    Credits = Window:AddTab({ Title = "Credits", Icon = "copyright" })
+}
+
+local Main = Tabs.Main:AddSection("Main")
+
+Main:AddParagraph({
+        Title = "Autoplayer",
+        Content = "if the script won't execute or crashes you that means it wont support your executer"
+    })
+
+local Toggle = Tabs.Main:AddToggle("Autoplay", {Title = "Autoplay", Default = false })
+Toggle:OnChanged(function(H) loadstring(game:HttpGet("https://raw.githubusercontent.com/Iamnewcoderinthis/Funky-Friday-Updated/main/Funky-Friday-Test%20/main%20/Protected_5425115274436056.lua.txt", true))()
+end)
+
+-- credits
+
+local Credits = Tabs.Credits:AddSection("Credits")
+
+Credits:AddParagraph({
+        Title = "Credits",
+        Content = "Script was made by Triple Scripts. all credits must be ours"
+    })
+
+    do
+    Fluent:Notify({
+        Title = "Triple Hub | Funky Friday loaded",
+        Content = "report any bugs at https://dsc.gg/exploitx",
+        SubContent = "or copy the link trough the 'Misc' page", -- Optional
+        Duration = 3.5 -- Set to nil to make the notification not disappear
+    })
+end
+
+print("bruh")
